@@ -4,24 +4,19 @@ package main
 import "fmt"
 
 func main() {
-	valor1 := 1
-	valor2 := 2
-
-	if valor1 == 1 {
-		fmt.Println("Es 1")
-	} else {
-		fmt.Println("No es 1")
+	modulo := 5 % 2
+	switch modulo {
+	case 0:
+		fmt.Println("Es par")
+	default:
+		fmt.Println("Es impar")
 	}
-
-	if valor1 == 1 && valor2 == 2 {
-		fmt.Println("Es verdad")
-	} else {
-		fmt.Println("No es cierto")
-	}
-
-	if valor1 == 1 || valor2 == 2 {
-		fmt.Println("Cierto")
-	} else {
-		fmt.Println("Falso")
+	//sin condicion
+	valor := 200
+	switch {
+	case valor > 100:
+		fmt.Println("El valor es mayor que 100")
+	case valor < 100:
+		fmt.Println("El valor es menor que 100")
 	}
 }
