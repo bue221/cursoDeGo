@@ -1,56 +1,23 @@
 // primera clase de go
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func isPalindromo(text string) bool {
-	var textReverse string
-	// text a miniscula
-	var textLower string = strings.ToLower(text)
-
-	for i := len(text) - 1; i >= 0; i-- {
-		textReverse += string(textLower[i])
-	}
-
-	if textLower == textReverse {
-		return true
-	} else {
-		return false
-	}
-}
+import "fmt"
 
 func main() {
-	//defer, BREAK CONTINUE
-	// defer fmt.Println("Hola")
-	// fmt.Println("Buena")
 
-	//array, slices
-	var array [4]int
-	array[0] = 1
-	array[1] = 2
-	array[2] = 3
+	m := make(map[string]int)
 
-	fmt.Println(array, len(array), cap(array))
+	m["Jose"] = 14
+	m["Pepa"] = 14
 
-	//slices
-	slice := []int{1, 2, 4, 5, 4}
-	fmt.Println(slice)
+	fmt.Println(m)
 
-	// for range
-
-	slice2 := []string{"Andres", "aceite", "hola", "Ama"}
-	for _, valor := range slice2 {
-		if isPalindromo(valor) {
-			fmt.Printf("La palabra %s es un palindormo", valor)
-			fmt.Println("")
-		} else {
-			fmt.Printf("La palabra %s NO es un palindormo", valor)
-			fmt.Println("")
-
-		}
+	//recorrer map
+	for i, v := range m {
+		fmt.Println(i, v)
 	}
 
+	//encontrar un valor
+	value := m["jose"]
+	fmt.Println(value)
 }
