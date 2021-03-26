@@ -4,23 +4,24 @@ package main
 import "fmt"
 
 func main() {
-	// for i := 0; i < 10; i++ {
-	// 	fmt.Println("Ciclo: ", i)
-	// }
+	valor1 := 1
+	valor2 := 2
 
-	// while
+	if valor1 == 1 {
+		fmt.Println("Es 1")
+	} else {
+		fmt.Println("No es 1")
+	}
 
-	// counter := 0
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Es verdad")
+	} else {
+		fmt.Println("No es cierto")
+	}
 
-	// for counter < 10 {
-	// 	fmt.Println("Ciclo while: ", counter)
-	// 	counter++
-	// }
-
-	// forever
-	counter := 0
-	for {
-		fmt.Println(counter)
-		counter++
+	if valor1 == 1 || valor2 == 2 {
+		fmt.Println("Cierto")
+	} else {
+		fmt.Println("Falso")
 	}
 }
